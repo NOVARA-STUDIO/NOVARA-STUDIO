@@ -102,3 +102,15 @@ body::before {
   50% { transform: translate(-40px, 30px); }
   100% { transform: translate(0,0); }
 }
+
+
+.section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
