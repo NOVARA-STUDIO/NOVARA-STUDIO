@@ -84,3 +84,21 @@ footer {
   padding: 30px;
   color: #666;
 }
+
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 20%, #2a2a6a33, transparent 40%),
+    radial-gradient(circle at 80% 60%, #6a2a4a33, transparent 40%);
+  animation: bgMove 20s linear infinite;
+  z-index: -1;
+}
+
+@keyframes bgMove {
+  0% { transform: translate(0,0); }
+  50% { transform: translate(-40px, 30px); }
+  100% { transform: translate(0,0); }
+}
