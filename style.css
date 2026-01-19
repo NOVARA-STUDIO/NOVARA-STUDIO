@@ -194,3 +194,10 @@ footer {
   50% { transform: scale(1); }
   75% { transform: scale(1); }
 }
+
+
+* {
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
