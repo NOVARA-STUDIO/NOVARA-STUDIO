@@ -212,9 +212,18 @@ footer {
 
 
 
+
 .platform {
   width: 32px;
   height: 32px;
+  padding: 4px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 8px;
   object-fit: contain;
-  image-rendering: auto;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.project-card:hover .platform {
+  transform: scale(1.15);
+  background: rgba(255,255,255,0.12);
 }
