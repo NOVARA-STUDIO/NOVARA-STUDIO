@@ -1,3 +1,12 @@
+
+
+
+.img-small { max-width: 50px; }
+.img-medium { max-width: 300px; }
+.img-large { max-width: 500px; }
+
+
+
 * {
   margin: 0;
   padding: 0;
