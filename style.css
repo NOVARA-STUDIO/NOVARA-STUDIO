@@ -1,12 +1,6 @@
 
 
 
-.img-small { max-width: 50px; }
-.img-medium { max-width: 300px; }
-.img-large { max-width: 500px; }
-
-
-
 * {
   margin: 0;
   padding: 0;
@@ -214,22 +208,13 @@ footer {
 
 
 
-.platforms {
-  display: flex;
-  gap: 12px;
-  padding: 0 12px 8px;
-}
+
+
+
 
 .platform {
-  width: 50px;
-  height: 50px;
-  color: #aaa;
-  opacity: 0.75;
-  transition: transform 0.3s, color 0.3s, opacity 0.3s;
-}
-
-.project-card:hover .platform {
-  opacity: 1;
-  color: #fff;
-  transform: scale(1.15);
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  image-rendering: auto;
 }
