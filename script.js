@@ -86,7 +86,7 @@ renderProjects();
 // Create animated particles
 function createParticles() {
     const particlesContainer = document.getElementById('particles');
-    const particleCount = 100;
+    const particleCount = 200;
 
     for (let i = 0; i < particleCount; i++) {
         const particle = document.createElement('div');
