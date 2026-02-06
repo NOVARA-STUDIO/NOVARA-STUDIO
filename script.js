@@ -20,8 +20,8 @@ const projects = [
         ],
         technologies: ["Godot"],
         screenshots: [
-            "images/airdefense-screenshot1.jpg",
-            "images/airdefense-screenshot2.jpg"
+            "projects images/airdefense-screenshot1.jpg",
+            "projects images/airdefense-screenshot2.jpg"
         ]
     }
 ];
