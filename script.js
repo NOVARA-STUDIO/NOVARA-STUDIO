@@ -7,7 +7,7 @@ const projects = [
         preview: "projects img/Air Defense Ops.jpg",
         platforms: ["windows", "macos", "android"],
         created: "27.12.2025",
-        updated: "13.01.2026",
+        updated: "06.02.2026",
         downloadUrls: {
             windows: "https://github.com/NOVARA-STUDIO/NOVARA-STUDIO/releases/download/exe/Air.Defense.Ops.exe",
             macos: "https://github.com/NOVARA-STUDIO/NOVARA-STUDIO/releases/download/macOS/Air.Defense.Ops.zip",
