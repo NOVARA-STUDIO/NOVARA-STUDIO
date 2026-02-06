@@ -1,4 +1,3 @@
-// Projects data - ЗАМІНІТЬ URL ЗОБРАЖЕНЬ НА СВОЇ!
 const projects = [
     {
         id: 1,
