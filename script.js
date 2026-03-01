@@ -23,31 +23,8 @@ const projects = [
         ],
         technologies: ["Godot"],
         screenshots: [
-            "images/airdefense-screenshot1.jpg",
-            "images/airdefense-screenshot2.jpg"
-        ]
-    },
-    {
-        id: 2,
-        title: "Новий проєкт",
-        url: "#project-2",
-        preview: "projects img/project2.jpg",
-        platforms: ["android"],
-        created: "31.01.2026",
-        updated: "31.01.2026",
-        downloadUrls: {
-            android: "https://play.google.com/store/apps/details?id=com.novara.newproject"
-        },
-        description: "Опис нового проєкту буде тут.",
-        features: [
-            "Автоматична синхронізація",
-            "Простий інтерфейс",
-            "Швидка робота"
-        ],
-        technologies: ["Godot"],
-        screenshots: [
-            "images/project2-screenshot1.jpg",
-            "images/project2-screenshot2.jpg"
+            "projects images/airdefense-screenshot1.jpg",
+            "projects images/airdefense-screenshot2.jpg"
         ]
     }
 ];
