@@ -23,24 +23,18 @@
 
     <main>
         <div class="main-content" id="mainContent">
+            <!-- Navigation Tabs -->
+            <div class="container">
+                <nav class="nav-tabs">
+                    <a href="#projects" class="nav-tab active" id="tabProjects">Проєкти</a>
+                    <a href="#news" class="nav-tab" id="tabNews">Новини</a>
+                </nav>
+            </div>
+
             <section class="intro">
                 <div class="container">
                     <h1>Творимо цифрові продукти</h1>
-                    <p>NOVARA STUDIO™ — незалежна студія розробки ігор та програм.
-    Працюємо з ідеями, експериментами і майбутніми форматами.</p>
-                </div>
-            </section>
-
-            <section class="tabs-section">
-                <div class="container">
-                    <div class="tabs">
-                        <button class="tab-button active" data-tab="projects">
-                            <span>Проєкти</span>
-                        </button>
-                        <button class="tab-button" data-tab="news">
-                            <span>Новини</span>
-                        </button>
-                    </div>
+                    <p>Розробляємо застосунки та сервіси для різних платформ з фокусом на якість та користувацький досвід</p>
                 </div>
             </section>
 
@@ -52,7 +46,7 @@
                 </div>
             </section>
 
-            <section class="news" id="newsSection" style="display: none;">
+            <section class="news-section" id="newsSection">
                 <div class="container">
                     <div class="news-grid" id="newsGrid">
                         <!-- News will be inserted here by JavaScript -->
@@ -97,11 +91,26 @@
                 </div>
             </div>
         </div>
+
+        <!-- News Detail Page -->
+        <div class="news-detail" id="newsDetail">
+            <div class="container">
+                <a href="#" class="back-button" id="backButtonNews">
+                    <svg class="back-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                    <span>Назад до новин</span>
+                </a>
+                <div id="newsDetailContent">
+                    <!-- News details will be inserted here -->
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer>
         <div class="container">
-            <p>© 2026 NOVARA STUDIO™</p>
+            <p>© 2024 NOVARA STUDIO™. Всі права захищені.</p>
         </div>
     </footer>
 
