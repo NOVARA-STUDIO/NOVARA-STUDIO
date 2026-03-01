@@ -26,6 +26,45 @@ const projects = [
     }
 ];
 
+const news = [
+    {
+        id: 1,
+        title: "Air Defense Ops отримав оновлення 0.24.1",
+        category: "Оновлення",
+        date: "10.02.2026",
+        image: "projects img/Air Defense Ops.jpg",
+        description: "Вийшло нове оновлення з покращеннями продуктивності та виправленням багів. Додані нові типи ракет та поліпшена графіка радарної системи.",
+        content: "Це оновлення містить критичні виправлення та нові можливості для гравців."
+    },
+    {
+        id: 2,
+        title: "Запуск нового проєкту NOVARA STUDIO",
+        category: "Анонс",
+        date: "05.02.2026",
+        image: "projects img/Air Defense Ops.jpg",
+        description: "NOVARA STUDIO запускає новий проєкт розробки. Команда працює над амбітним проєктом, який буде розкрито найближчими місяцями.",
+        content: "Дотримуйтесь нас для отримання оновлень про новий проєкт."
+    },
+    {
+        id: 3,
+        title: "Брав участь у гейм-джемі Global Game Jam 2026",
+        category: "Подія",
+        date: "30.01.2026",
+        image: "projects img/Air Defense Ops.jpg",
+        description: "Команда NOVARA STUDIO успішно закінчила участь у Global Game Jam 2026 з новим експериментальним прототипом.",
+        content: "Прототип отримав позитивні відгуки від учасників та журі конкурсу."
+    },
+    {
+        id: 4,
+        title: "Air Defense Ops вийшов на мобільні пристрої",
+        category: "Релліз",
+        date: "20.01.2026",
+        image: "projects img/Air Defense Ops.jpg",
+        description: "Air Defense Ops тепер доступна на Android! Гра оптимізована для мобільних пристроїв з адаптованим інтерфейсом.",
+        content: "Завантажуйте гру з Google Play та інших платформ розповсюджування."
+    }
+];
+
 // Platform icons
 const platformIcons = {
     android: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4483-.9993.9993-.9993c.5511 0 .9993.4483.9993.9993.0001.5511-.4482.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4483.9993.9993 0 .5511-.4483.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.2439 13.8533 7.8508 12 7.8508s-3.5902.3931-5.1367 1.0989L4.841 5.4467a.4161.4161 0 00-.5677-.1521.4157.4157 0 00-.1521.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3435-4.1021-2.6892-7.5743-6.1185-9.4396"/></svg>`,
@@ -84,8 +123,44 @@ function renderProjects() {
     });
 }
 
+// Render news
+function renderNews() {
+    const grid = document.getElementById('newsGrid');
+    grid.innerHTML = '';
+
+    news.forEach(newsItem => {
+        const card = document.createElement('div');
+        card.className = 'news-card';
+
+        card.innerHTML = `
+            <div class="news-image">
+                <img src="${newsItem.image}" alt="${newsItem.title}" loading="lazy">
+            </div>
+            <div class="news-content">
+                <span class="news-tag">${newsItem.category}</span>
+                <h3 class="news-title">${newsItem.title}</h3>
+                <p class="news-description">${newsItem.description}</p>
+                <div class="news-footer">
+                    <span class="news-date">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 14px; height: 14px;">
+                            <circle cx="12" cy="12" r="1"></circle>
+                            <path d="M12 6v6m0 0v6"></path>
+                            <circle cx="12" cy="12" r="10"></circle>
+                        </svg>
+                        ${newsItem.date}
+                    </span>
+                    <span class="news-read-more">Читати далі →</span>
+                </div>
+            </div>
+        `;
+
+        grid.appendChild(card);
+    });
+}
+
 // Initialize
 renderProjects();
+renderNews();
 
 // Create animated particles
 function createParticles() {
@@ -118,6 +193,33 @@ function createParticles() {
 }
 
 createParticles();
+
+// Tabs functionality
+const tabButtons = document.querySelectorAll('.tab-button');
+const projectsSection = document.getElementById('projectsSection');
+const newsSection = document.getElementById('newsSection');
+
+tabButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Remove active class from all buttons
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        
+        // Add active class to clicked button
+        button.classList.add('active');
+        
+        // Get the tab name
+        const tabName = button.getAttribute('data-tab');
+        
+        // Show/hide sections
+        if (tabName === 'projects') {
+            projectsSection.style.display = 'block';
+            newsSection.style.display = 'none';
+        } else if (tabName === 'news') {
+            projectsSection.style.display = 'none';
+            newsSection.style.display = 'block';
+        }
+    });
+});
 
 // Navigation
 function showProjectDetail(projectId) {
@@ -270,6 +372,6 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe elements
-document.querySelectorAll('.project-card').forEach(card => {
+document.querySelectorAll('.project-card, .news-card').forEach(card => {
     observer.observe(card);
 });
