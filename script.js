@@ -171,21 +171,13 @@ function createParticles() {
         const particle = document.createElement('div');
         particle.className = 'particle';
 
-        // Random horizontal position
         particle.style.left = Math.random() * 100 + '%';
-
-        // Random animation duration between 10-20 seconds
         particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
-
-        // Random delay
         particle.style.animationDelay = Math.random() * 5 + 's';
 
-        // Random size
         const size = Math.random() * 3 + 1;
         particle.style.width = size + 'px';
         particle.style.height = size + 'px';
-
-        // Random opacity
         particle.style.opacity = Math.random() * 0.5 + 0.2;
 
         particlesContainer.appendChild(particle);
@@ -201,16 +193,11 @@ const newsSection = document.getElementById('newsSection');
 
 tabButtons.forEach(button => {
     button.addEventListener('click', () => {
-        // Remove active class from all buttons
         tabButtons.forEach(btn => btn.classList.remove('active'));
-        
-        // Add active class to clicked button
         button.classList.add('active');
         
-        // Get the tab name
         const tabName = button.getAttribute('data-tab');
         
-        // Show/hide sections
         if (tabName === 'projects') {
             projectsSection.style.display = 'block';
             newsSection.style.display = 'none';
@@ -230,16 +217,13 @@ function showProjectDetail(projectId) {
     const projectDetail = document.getElementById('projectDetail');
     const detailContent = document.getElementById('projectDetailContent');
 
-    // Hide main content
     mainContent.classList.add('hidden');
     projectDetail.classList.add('active');
 
-    // Build platforms HTML
     const platformsHTML = project.platforms.map(platform => 
         `<div class="platform-icon">${platformIcons[platform]}</div>`
     ).join('');
 
-    // Build download buttons for each platform
     const downloadButtonsHTML = project.platforms.map(platform => {
         const url = project.downloadUrls[platform];
         return `
@@ -250,7 +234,6 @@ function showProjectDetail(projectId) {
         `;
     }).join('');
 
-    // Build features HTML
     const featuresHTML = project.features.length > 0 ? project.features.map(feature => `
         <li class="feature-item">
             <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -260,19 +243,16 @@ function showProjectDetail(projectId) {
         </li>
     `).join('') : '<li class="feature-item"><span>Особливості будуть додані пізніше</span></li>';
 
-    // Build technologies HTML
     const techHTML = project.technologies.map(tech => 
         `<div class="tech-tag">${tech}</div>`
     ).join('');
 
-    // Build screenshots HTML
     const screenshotsHTML = project.screenshots.map(screenshot => `
         <div class="screenshot">
             <img src="${screenshot}" alt="${project.title} screenshot" loading="lazy">
         </div>
     `).join('');
 
-    // Render project detail
     detailContent.innerHTML = `
         <div class="project-detail-header">
             <h1 class="project-detail-title">${project.title}</h1>
@@ -321,7 +301,6 @@ function showProjectDetail(projectId) {
         </div>
     `;
 
-    // Scroll to top
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
