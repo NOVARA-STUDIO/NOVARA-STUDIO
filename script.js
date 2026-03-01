@@ -1,3 +1,4 @@
+// Projects data - ЗАМІНІТЬ URL ЗОБРАЖЕНЬ НА СВОЇ!
 const projects = [
     {
         id: 1,
@@ -6,69 +7,86 @@ const projects = [
         preview: "projects img/Air Defense Ops.jpg",
         platforms: ["windows", "macos", "android"],
         created: "27.12.2025",
-        updated: "10.02.2026",
-        version: "0.24.1",
+        updated: "13.01.2026",
         downloadUrls: {
-            windows: "https://github.com/NOVARA-STUDIO/NOVARA-STUDIO/releases/download/exe/Air.Defense.Ops.exe",
-            macos: "https://github.com/NOVARA-STUDIO/NOVARA-STUDIO/releases/download/macOS/Air.Defense.Ops.zip",
-            android: "https://github.com/NOVARA-STUDIO/NOVARA-STUDIO/releases/download/apk/Air.Defense.Ops.apk"
+            windows: "https://github.com/novara-studio/air-defense/releases/download/windows",
+            macos: "https://github.com/novara-studio/air-defense/releases/download/macos",
+            android: "https://play.google.com/store/apps/details?id=com.novara.airdefense"
         },
         description: "Обороняй країну від повітряних загроз: дронів, ракет. Керуй радарами та ППО, виявляй цілі й знищуй їх до удару. Кожне рішення впливає на виживання країни.",
         features: [
+            "Реалістична система виявлення повітряних цілей",
             "Різні типи ракет та систем ППО",
-            "Режим виживання"
+            "Динамічні погодні умови",
+            "Стратегічне управління ресурсами",
+            "Кампанія та режим виживання"
         ],
         technologies: ["Godot"],
         screenshots: [
-            "projects images/airdefense-screenshot1.jpg",
-            "projects images/airdefense-screenshot2.jpg"
+            "images/airdefense-screenshot1.jpg",
+            "images/airdefense-screenshot2.jpg"
+        ]
+    },
+    {
+        id: 2,
+        title: "Новий проєкт",
+        url: "#project-2",
+        preview: "projects img/project2.jpg",
+        platforms: ["android"],
+        created: "31.01.2026",
+        updated: "31.01.2026",
+        downloadUrls: {
+            android: "https://play.google.com/store/apps/details?id=com.novara.newproject"
+        },
+        description: "Опис нового проєкту буде тут.",
+        features: [
+            "Автоматична синхронізація",
+            "Простий інтерфейс",
+            "Швидка робота"
+        ],
+        technologies: ["Godot"],
+        screenshots: [
+            "images/project2-screenshot1.jpg",
+            "images/project2-screenshot2.jpg"
         ]
     }
 ];
 
+// News data - НОВИНИ СТУДІЇ
 const news = [
     {
         id: 1,
-        title: "Air Defense Ops отримав оновлення 0.24.1",
-        category: "Оновлення",
-        date: "10.02.2026",
-        image: "projects img/Air Defense Ops.jpg",
-        description: "Вийшло нове оновлення з покращеннями продуктивності та виправленням багів. Додані нові типи ракет та поліпшена графіка радарної системи.",
-        content: "Це оновлення містить критичні виправлення та нові можливості для гравців."
+        title: "Запуск Air Defense Ops на Android!",
+        date: "13.01.2026",
+        category: "Реліз",
+        preview: "images/news-airdefense-android.jpg",
+        content: "Раді повідомити, що Air Defense Ops тепер доступна на Android! Завантажуйте гру в Google Play та захищайте країну від повітряних загроз прямо на своєму смартфоні. Мобільна версія включає всі функції десктопної версії з оптимізованим управлінням для сенсорних екранів.",
+        tags: ["Air Defense Ops", "Android", "Реліз"]
     },
     {
         id: 2,
-        title: "Запуск нового проєкту NOVARA STUDIO",
-        category: "Анонс",
-        date: "05.02.2026",
-        image: "projects img/Air Defense Ops.jpg",
-        description: "NOVARA STUDIO запускає новий проєкт розробки. Команда працює над амбітним проєктом, який буде розкрито найближчими місяцями.",
-        content: "Дотримуйтесь нас для отримання оновлень про новий проєкт."
+        title: "Оновлення 1.2 для Air Defense Ops",
+        date: "27.12.2025",
+        category: "Оновлення",
+        preview: "images/news-update-1-2.jpg",
+        content: "Вийшло велике оновлення 1.2! Додано нові типи ракет, покращено систему радарів, оптимізовано продуктивність на старіших пристроях. Також виправлено понад 50 помилок, про які повідомили гравці. Дякуємо за відгуки!",
+        tags: ["Air Defense Ops", "Оновлення", "Патч"]
     },
     {
         id: 3,
-        title: "Брав участь у гейм-джемі Global Game Jam 2026",
-        category: "Подія",
-        date: "30.01.2026",
-        image: "projects img/Air Defense Ops.jpg",
-        description: "Команда NOVARA STUDIO успішно закінчила участь у Global Game Jam 2026 з новим експериментальним прототипом.",
-        content: "Прототип отримав позитивні відгуки від учасників та журі конкурсу."
-    },
-    {
-        id: 4,
-        title: "Air Defense Ops вийшов на мобільні пристрої",
-        category: "Релліз",
-        date: "20.01.2026",
-        image: "projects img/Air Defense Ops.jpg",
-        description: "Air Defense Ops тепер доступна на Android! Гра оптимізована для мобільних пристроїв з адаптованим інтерфейсом.",
-        content: "Завантажуйте гру з Google Play та інших платформ розповсюджування."
+        title: "NOVARA STUDIO™ розпочинає роботу!",
+        date: "01.12.2025",
+        category: "Новини студії",
+        preview: "images/news-studio-launch.jpg",
+        content: "Вітаємо на офіційному сайті NOVARA STUDIO™! Ми — команда розробників, що створює ігри, програми та цифрові рішення. Наша мета — робити якісні продукти з фокусом на користувацький досвід. Слідкуйте за нашими новинами!",
+        tags: ["NOVARA STUDIO", "Анонс"]
     }
 ];
 
 // Platform icons
 const platformIcons = {
     android: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4483-.9993.9993-.9993c.5511 0 .9993.4483.9993.9993.0001.5511-.4482.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4483.9993.9993 0 .5511-.4483.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.2439 13.8533 7.8508 12 7.8508s-3.5902.3931-5.1367 1.0989L4.841 5.4467a.4161.4161 0 00-.5677-.1521.4157.4157 0 00-.1521.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3435-4.1021-2.6892-7.5743-6.1185-9.4396"/></svg>`,
-    windows: `<svg viewBox="0 0 24 24" fill="currentColor"><rect x="1" y="1" width="10" height="10" rx="2"/><rect x="13" y="1" width="10" height="10" rx="2"/><rect x="1" y="13" width="10" height="10" rx="2"/><rect x="13" y="13" width="10" height="10" rx="2"/></svg>`,
+    windows: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>`,
     macos: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M14.94 5.19A4.38 4.38 0 0 0 16 2a4.44 4.44 0 0 0-3 1.52 4.17 4.17 0 0 0-1 3.09 3.69 3.69 0 0 0 2.94-1.42zm2.52 7.44a4.51 4.51 0 0 1 2.16-3.81 4.66 4.66 0 0 0-3.66-2c-1.56-.16-3 .91-3.83.91s-2-.89-3.3-.87a4.92 4.92 0 0 0-4.14 2.53C2.93 12.45 4.24 17 5.94 19.47c.8 1.21 1.8 2.58 3.12 2.53s1.75-.82 3.28-.82 2 .82 3.3.79 2.22-1.24 3.06-2.45a11 11 0 0 0 1.38-2.85 4.41 4.41 0 0 1-2.62-4.08z"/></svg>`
 };
 
@@ -82,17 +100,17 @@ const platformNames = {
 // Render projects
 function renderProjects() {
     const grid = document.getElementById('projectsGrid');
-
+    
     projects.forEach(project => {
         const card = document.createElement('a');
         card.href = project.url;
         card.className = 'project-card';
         card.rel = 'noopener';
-
+        
         const platformsHTML = project.platforms.map(platform => 
             `<div class="platform-icon">${platformIcons[platform]}</div>`
         ).join('');
-
+        
         card.innerHTML = `
             <div class="project-preview">
                 <img src="${project.preview}" alt="${project.title}" loading="lazy">
@@ -111,102 +129,85 @@ function renderProjects() {
                         <span class="date-label">Оновлено:</span>
                         <span>${project.updated}</span>
                     </div>
-                    <div class="date-row">
-                        <span class="date-label">Версія:</span>
-                        <span>${project.version}</span>
-                    </div>
                 </div>
             </div>
         `;
-
-        grid.appendChild(card);
-    });
-}
-
-// Render news
-function renderNews() {
-    const grid = document.getElementById('newsGrid');
-    grid.innerHTML = '';
-
-    news.forEach(newsItem => {
-        const card = document.createElement('div');
-        card.className = 'news-card';
-
-        card.innerHTML = `
-            <div class="news-image">
-                <img src="${newsItem.image}" alt="${newsItem.title}" loading="lazy">
-            </div>
-            <div class="news-content">
-                <span class="news-tag">${newsItem.category}</span>
-                <h3 class="news-title">${newsItem.title}</h3>
-                <p class="news-description">${newsItem.description}</p>
-                <div class="news-footer">
-                    <span class="news-date">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 14px; height: 14px;">
-                            <circle cx="12" cy="12" r="1"></circle>
-                            <path d="M12 6v6m0 0v6"></path>
-                            <circle cx="12" cy="12" r="10"></circle>
-                        </svg>
-                        ${newsItem.date}
-                    </span>
-                    <span class="news-read-more">Читати далі →</span>
-                </div>
-            </div>
-        `;
-
+        
         grid.appendChild(card);
     });
 }
 
 // Initialize
 renderProjects();
+
+// Render news
+function renderNews() {
+    const newsGrid = document.getElementById('newsGrid');
+    if (!newsGrid) return;
+    
+    news.forEach(item => {
+        const card = document.createElement('article');
+        card.className = 'news-card';
+        card.onclick = () => {
+            window.location.hash = `#news-${item.id}`;
+        };
+        
+        const tagsHTML = item.tags.map(tag => 
+            `<span class="news-tag">${tag}</span>`
+        ).join('');
+        
+        card.innerHTML = `
+            <div class="news-preview">
+                <img src="${item.preview}" alt="${item.title}" loading="lazy">
+                <span class="news-category">${item.category}</span>
+            </div>
+            <div class="news-info">
+                <div class="news-date">${item.date}</div>
+                <h3 class="news-title">${item.title}</h3>
+                <p class="news-excerpt">${item.content.substring(0, 120)}...</p>
+                <div class="news-tags">
+                    ${tagsHTML}
+                </div>
+            </div>
+        `;
+        
+        newsGrid.appendChild(card);
+    });
+}
+
 renderNews();
 
 // Create animated particles
 function createParticles() {
     const particlesContainer = document.getElementById('particles');
-    const particleCount = 200;
+    const particleCount = 100;
 
     for (let i = 0; i < particleCount; i++) {
         const particle = document.createElement('div');
         particle.className = 'particle';
-
+        
+        // Random horizontal position
         particle.style.left = Math.random() * 100 + '%';
+        
+        // Random animation duration between 10-20 seconds
         particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+        
+        // Random delay
         particle.style.animationDelay = Math.random() * 5 + 's';
-
+        
+        // Random size
         const size = Math.random() * 3 + 1;
         particle.style.width = size + 'px';
         particle.style.height = size + 'px';
+        
+        // Random opacity
         particle.style.opacity = Math.random() * 0.5 + 0.2;
-
+        
         particlesContainer.appendChild(particle);
     }
 }
 
 createParticles();
-
-// Tabs functionality
-const tabButtons = document.querySelectorAll('.tab-button');
-const projectsSection = document.getElementById('projectsSection');
-const newsSection = document.getElementById('newsSection');
-
-tabButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        tabButtons.forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
-        
-        const tabName = button.getAttribute('data-tab');
-        
-        if (tabName === 'projects') {
-            projectsSection.style.display = 'block';
-            newsSection.style.display = 'none';
-        } else if (tabName === 'news') {
-            projectsSection.style.display = 'none';
-            newsSection.style.display = 'block';
-        }
-    });
-});
 
 // Navigation
 function showProjectDetail(projectId) {
@@ -217,13 +218,16 @@ function showProjectDetail(projectId) {
     const projectDetail = document.getElementById('projectDetail');
     const detailContent = document.getElementById('projectDetailContent');
 
+    // Hide main content
     mainContent.classList.add('hidden');
     projectDetail.classList.add('active');
 
+    // Build platforms HTML
     const platformsHTML = project.platforms.map(platform => 
         `<div class="platform-icon">${platformIcons[platform]}</div>`
     ).join('');
 
+    // Build download buttons for each platform
     const downloadButtonsHTML = project.platforms.map(platform => {
         const url = project.downloadUrls[platform];
         return `
@@ -234,6 +238,7 @@ function showProjectDetail(projectId) {
         `;
     }).join('');
 
+    // Build features HTML
     const featuresHTML = project.features.length > 0 ? project.features.map(feature => `
         <li class="feature-item">
             <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -243,16 +248,19 @@ function showProjectDetail(projectId) {
         </li>
     `).join('') : '<li class="feature-item"><span>Особливості будуть додані пізніше</span></li>';
 
+    // Build technologies HTML
     const techHTML = project.technologies.map(tech => 
         `<div class="tech-tag">${tech}</div>`
     ).join('');
 
+    // Build screenshots HTML
     const screenshotsHTML = project.screenshots.map(screenshot => `
         <div class="screenshot">
             <img src="${screenshot}" alt="${project.title} screenshot" loading="lazy">
         </div>
     `).join('');
 
+    // Render project detail
     detailContent.innerHTML = `
         <div class="project-detail-header">
             <h1 class="project-detail-title">${project.title}</h1>
@@ -268,9 +276,6 @@ function showProjectDetail(projectId) {
                 </div>
                 <div class="meta-item">
                     <span>Оновлено: ${project.updated}</span>
-                </div>
-                <div class="meta-item">
-                    <span>Версія: ${project.version}</span>
                 </div>
             </div>
             <p class="project-detail-description">${project.description}</p>
@@ -301,15 +306,60 @@ function showProjectDetail(projectId) {
         </div>
     `;
 
+    // Scroll to top
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Show news detail
+function showNewsDetail(newsId) {
+    const newsItem = news.find(n => n.id === newsId);
+    if (!newsItem) return;
+
+    const mainContent = document.getElementById('mainContent');
+    const newsDetail = document.getElementById('newsDetail');
+    const detailContent = document.getElementById('newsDetailContent');
+
+    // Hide main content
+    mainContent.classList.add('hidden');
+    newsDetail.classList.add('active');
+
+    // Build tags HTML
+    const tagsHTML = newsItem.tags.map(tag => 
+        `<span class="news-tag">${tag}</span>`
+    ).join('');
+
+    // Render news detail
+    detailContent.innerHTML = `
+        <div class="news-detail-header">
+            <span class="news-category">${newsItem.category}</span>
+            <h1 class="news-detail-title">${newsItem.title}</h1>
+            <div class="news-detail-meta">
+                <span class="news-date">${newsItem.date}</span>
+            </div>
+        </div>
+        <div class="news-detail-image">
+            <img src="${newsItem.preview}" alt="${newsItem.title}">
+        </div>
+        <div class="news-detail-content">
+            <p>${newsItem.content}</p>
+        </div>
+        <div class="news-tags">
+            ${tagsHTML}
+        </div>
+    `;
+
+    // Scroll to top
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function showMainContent() {
     const mainContent = document.getElementById('mainContent');
     const projectDetail = document.getElementById('projectDetail');
+    const newsDetail = document.getElementById('newsDetail');
 
     mainContent.classList.remove('hidden');
     projectDetail.classList.remove('active');
+    if (newsDetail) newsDetail.classList.remove('active');
 
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
@@ -321,12 +371,60 @@ document.getElementById('backButton').addEventListener('click', (e) => {
     window.location.hash = '';
 });
 
+document.getElementById('backButtonNews').addEventListener('click', (e) => {
+    e.preventDefault();
+    showMainContent();
+    window.location.hash = '#news';
+});
+
+// Tab switching
+document.getElementById('tabProjects').addEventListener('click', (e) => {
+    e.preventDefault();
+    switchTab('projects');
+});
+
+document.getElementById('tabNews').addEventListener('click', (e) => {
+    e.preventDefault();
+    switchTab('news');
+});
+
+function switchTab(tab) {
+    const projectsSection = document.getElementById('projectsSection');
+    const newsSection = document.getElementById('newsSection');
+    const tabProjects = document.getElementById('tabProjects');
+    const tabNews = document.getElementById('tabNews');
+    const intro = document.querySelector('.intro');
+
+    if (tab === 'projects') {
+        projectsSection.style.display = 'block';
+        newsSection.classList.remove('active');
+        tabProjects.classList.add('active');
+        tabNews.classList.remove('active');
+        intro.style.display = 'block';
+        window.location.hash = '#projects';
+    } else if (tab === 'news') {
+        projectsSection.style.display = 'none';
+        newsSection.classList.add('active');
+        tabProjects.classList.remove('active');
+        tabNews.classList.add('active');
+        intro.style.display = 'none';
+        window.location.hash = '#news';
+    }
+}
+
 // Handle hash navigation
 function handleNavigation() {
     const hash = window.location.hash;
     if (hash.startsWith('#project-')) {
         const projectId = parseInt(hash.replace('#project-', ''));
         showProjectDetail(projectId);
+    } else if (hash.startsWith('#news-')) {
+        const newsId = parseInt(hash.replace('#news-', ''));
+        showNewsDetail(newsId);
+    } else if (hash === '#news') {
+        switchTab('news');
+    } else if (hash === '#projects' || hash === '') {
+        switchTab('projects');
     } else {
         showMainContent();
     }
@@ -351,6 +449,6 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe elements
-document.querySelectorAll('.project-card, .news-card').forEach(card => {
+document.querySelectorAll('.project-card').forEach(card => {
     observer.observe(card);
 });
