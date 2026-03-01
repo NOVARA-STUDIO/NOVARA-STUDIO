@@ -8,6 +8,7 @@ const projects = [
         platforms: ["windows", "macos", "android"],
         created: "27.12.2025",
         updated: "10.02.2026",
+        version: "0.24.1",
         downloadUrls: {
             windows: "https://github.com/NOVARA-STUDIO/NOVARA-STUDIO/releases/download/exe/Air.Defense.Ops.exe",
             macos: "https://github.com/NOVARA-STUDIO/NOVARA-STUDIO/releases/download/macOS/Air.Defense.Ops.zip",
@@ -105,6 +106,10 @@ function renderProjects() {
                     <div class="date-row">
                         <span class="date-label">Оновлено:</span>
                         <span>${project.updated}</span>
+                    </div>
+                    <div class="date-row">
+                        <span class="date-label">Версія:</span>
+                        <span>${project.version}</span>
                     </div>
                 </div>
             </div>
@@ -253,6 +258,9 @@ function showProjectDetail(projectId) {
                 </div>
                 <div class="meta-item">
                     <span>Оновлено: ${project.updated}</span>
+                </div>
+                <div class="meta-item">
+                    <span>Версія: ${project.version}</span>
                 </div>
             </div>
             <p class="project-detail-description">${project.description}</p>
